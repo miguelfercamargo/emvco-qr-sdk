@@ -70,7 +70,7 @@ jobs:
         env:
           GH_USERNAME: ${{ secrets.GH_USERNAME }}
           GH_PAT: ${{ secrets.GH_PAT }}
-          VERSION: ${{ needs.prepare.outputs.version }
+          VERSION: ${{ needs.prepare.outputs.version }}
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
