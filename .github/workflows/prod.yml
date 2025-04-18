@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-env:
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-
 jobs:
   prepare:
     name: Prepare & Check Tag
@@ -67,12 +64,13 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/miguelfercamargo/emvco-qr-sdk.git
+          git remote set-url origin https://${GH_USERNAME}:${GH_PAT}@github.com/miguelfercamargo/emvco-qr-sdk.git
           git tag $VERSION
           git push origin $VERSION
         env:
+          GH_USERNAME: ${{ secrets.GH_USERNAME }}
           GH_PAT: ${{ secrets.GH_PAT }}
-          VERSION: ${{ needs.prepare.outputs.version }}
+          VERSION: ${{ needs.prepare.outputs.version }
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v1
