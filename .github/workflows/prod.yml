@@ -80,6 +80,9 @@ jobs:
           name: Release ${{ needs.prepare.outputs.version }}
           generate_release_notes: true
 
+      - name: Configure .npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+
       - name: Publish package
         run: npm publish --access public
         env:
