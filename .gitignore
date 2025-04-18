@@ -1,0 +1,28 @@
+# Node modules
+node_modules/
+
+# Directorios de salida de compilación
+dist/
+build/
+
+# Archivos de caché de TypeScript
+*.tsbuildinfo
+
+# Logs
+*.log
+logs/
+
+# Archivos de variables de entorno
+.env
+.env.*
+
+# Reportes de cobertura de tests
+coverage/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Configuraciones de editores/IDE
+.vscode/
+.idea/

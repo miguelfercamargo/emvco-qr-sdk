@@ -1,0 +1,99 @@
+{
+  "name": "emvco-qr-sdk",
+  "version": "1.0.0",
+  "description": "A robust TypeScript SDK for decoding, validating, and processing EMVCo-compliant QR codes used in digital payment systems.",
+  "keywords": [
+    "emvco",
+    "qr",
+    "qr-code",
+    "tlv",
+    "emvco qr",
+    "emv",
+    "emv qr parser",
+    "qr code reader",
+    "payment",
+    "merchant-presented",
+    "emvco-sdk",
+    "emvco-parser",
+    "emvco-validator",
+    "emvco-colombia",
+    "emvco-co",
+    "qr-colombia",
+    "qr pagos",
+    "qr pagos colombia",
+    "easpbv",
+    "easpbv-colombia",
+    "easpbv-v1.3",
+    "emvco-parser-colombia",
+    "banco de bogotá",
+    "pagos inmediatos",
+    "sdk qr emvco",
+    "qr-sdk",
+    "qr colombia",
+    "qr pagos digitales",
+    "qr interoperabilidad"
+  ],
+  "author": {
+    "name": "Miguel Camargo",
+    "email": "miguelfercamargo@gmail.com",
+    "url": "https://miguelcamargo.dev"
+  },
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "index.d.ts"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miguelfercamargo/emvco-qr-sdk.git"
+  },
+  "homepage": "https://github.com/miguelfercamargo/emvco-qr-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/miguelfercamargo/emvco-qr-sdk/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist coverage",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint 'src/**/*.{ts,js}'",
+    "lint:fix": "eslint 'src/**/*.{ts,js}' --fix",
+    "prettier": "prettier --check 'src/**/*.{ts,js,json,md}'",
+    "prettier:fix": "prettier --write 'src/**/*.{ts,js,json,md}'",
+    "fix:all": "npm run prettier:fix && npm run lint:fix",
+    "pack": "npm pack",
+    "publish:lib": "npm publish",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/jest": "^29.5.14",
+    "@typescript-eslint/eslint-plugin": "^8.30.1",
+    "@typescript-eslint/parser": "^8.30.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^10.1.2",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.6",
+    "globals": "^16.0.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "ts-jest": "^29.3.2",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.30.1"
+  }
+}
