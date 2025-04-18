@@ -1,4 +1,4 @@
-![EMVCo QR SDK Banner](./assets/banner.jpg)
+![EMVCo QR SDK Banner](https://raw.githubusercontent.com/miguelfercamargo/emvco-qr-sdk/refs/heads/main/assets/banner.jpg)
 # emvco-qr-sdk
 [![TypeScript](https://img.shields.io/badge/typescript-^5.0.0-blue.svg)](https://www.typescriptlang.org/)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D14.0.0-green.svg)](https://nodejs.org/)
